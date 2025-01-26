@@ -116,7 +116,7 @@ namespace mvc_project_for_crud.Controllers
                 newFileName = UploadImage(productdto.Imagefile); // Call helper method
                 DeleteImage(product.ImageFilename); // Call helper method
             }
-
+                
             // Update Product
             product.Name = productdto.Name;
             product.Brand = productdto.Brand;
@@ -127,7 +127,7 @@ namespace mvc_project_for_crud.Controllers
 
             context.SaveChanges();
 
-            return RedirectToAction("Index", "Product");
+            return RedirectToAction("Index", "Products");
         }
 
         // Helper Methods
